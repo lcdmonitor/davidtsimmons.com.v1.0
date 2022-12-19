@@ -1,0 +1,125 @@
+﻿@model DavidSimmons.Models.PostBlogEntryModel
+@{
+    ViewBag.Title = "Post";
+}
+
+@*TODO: REFACTOR JS TO SCRIPT FILE*@
+<script type="text/javascript">
+        $.fn.serializeObject = function () {
+            var o = {};
+            var a = this.serializeArray();
+            $.each(a, function () {
+                if (o[this.name] !== undefined) {
+                    if (!o[this.name].push) {
+                        o[this.name] = [o[this.name]];
+                    }
+                    o[this.name].push(this.value || '');
+                } else {
+                    o[this.name] = this.value || '';
+                }
+            });
+            return o;
+        };
+
+        function PostBlogEntry() {
+           
+            //$('input[type="submit"]').prop('disabled', true);
+
+            $('textarea').data('sceditor').updateOriginal();
+
+            var postData = $('form').serializeObject();
+
+            $.ajax({
+                type: 'POST',
+                contentType : 'application/json',
+                url: "Post",
+                data: JSON.stringify(postData),
+                success: function (returnPayload) {
+                    alert(returnPayload.Status)
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(thrownError);
+                },
+
+                processData: false,
+            });
+        }
+
+</script>
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Blog Post</legend>
+        <div class="editor-label">
+            @Html.LabelFor(m => Model.Title)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => Model.Title)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => Model.Summary)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => Model.Summary, new { @class = "input-lg" })
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => Model.PostContent)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => Model.PostContent, new { @class = "input-lg" })
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => Model.PostDate)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(m => Model.PostDate)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => Model.PostedByUser)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(m => Model.PostedByUser)
+        </div>
+
+        <p>
+            <input type="submit" value="Post" id="submitButton" onclick="PostBlogEntry(); return false;" />
+        </p>
+    </fieldset>
+}
+
+
+@section sidebar
+{
+    <div class="sidebar-module sidebar-module-inset">
+        <h4>Allowed BB Code Tags</h4>
+        <ul>
+            @foreach (var t in BBCodeTags.GetAllowedTags())
+            {
+                <li>@t.Name</li>
+            }
+        </ul>
+    </div><!-- /.blog-sidebar -->
+}
+
+@section head
+{
+    @Scripts.Render("~/bundles/editor")
+    @Styles.Render("~/editor/css")
+
+    <script language="javascript" type="text/javascript">
+    			    $(document).ready(function() {
+				    var initEditor = function() {
+					    $("textarea").sceditor({
+						    plugins: 'bbcode',
+						    style: "@Styles.Url("~/editor/css")",
+					        emoticonsEnabled: false,
+					        width: "600",
+                            height: 260
+					    });
+				    };
+
+				    initEditor();
+    			    });
+    </script>
+}

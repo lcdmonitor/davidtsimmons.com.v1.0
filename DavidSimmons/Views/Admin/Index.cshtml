@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Admin Actions</h2>
+<ul>
+    <li>@Html.ActionLink("Upload Content", "Upload")</li>
+    <li>@Html.ActionLink("Post New Entry", "Post")</li>
+</ul>
+
+<h2>Admin Stats</h2>
+<ul>
+    <li>@Html.ActionLink("Raw Views", "PageViews")</li>
+    <li>@Html.ActionLink("Views By Day","ViewsByDay")</li>
+    <li>@Html.ActionLink("Views By URL", "ViewsByURL")</li>
+</ul>

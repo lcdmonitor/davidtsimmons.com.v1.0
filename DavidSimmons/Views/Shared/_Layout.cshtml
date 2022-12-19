@@ -1,0 +1,122 @@
+﻿@model DavidSimmons.Models.ViewModelBase
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @if (Model is DavidSimmons.Models.ViewModelBase && Model != null && Model.MetaDescription != null)
+    {
+    <meta name="description" content="@Model.MetaDescription" />
+    }
+    <meta name="robots" content="index,follow" />
+    <title>@ViewBag.Title - David T. Simmons.com</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @if (Request.IsAuthenticated)
+    {
+        //TODO: Load FOR ALL USERS, but load at the bottom, so its not blocking
+        Scripts.Render("~/bundles/SignalR");
+        Html.RenderHubScriptTag();
+        Html.RenderHubInitializationScript();
+        Scripts.Render("~/bundles/dsimmons");
+    }
+    @RenderSection("head", required: false)
+</head>
+<body>
+
+    <div class="blog-masthead">
+        <div class="container">
+            <nav class="blog-nav">
+                @Html.ActionLink("Home", "Index", "Home", null, new { @class = "blog-nav-item active" })
+                @*<a class="blog-nav-item active" href="/">Home</a>*@
+                @*<a class="blog-nav-item" href="#">New features</a>
+                    <a class="blog-nav-item" href="#">Press</a>
+                    <a class="blog-nav-item" href="#">New hires</a>
+                    <a class="blog-nav-item" href="#">About</a>*@
+                @Html.Partial("_LoginPartial")
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="blog-header">
+            <h1 class="blog-title">Dave's Blog</h1>
+            <p class="lead blog-description">A Random Guy, posting about Random Stuff...</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-8 blog-main">
+                @RenderBody()
+                <nav>
+                    @*TODO: IMPLEMENT PAGER*@
+                    @*<ul class="pager">
+                        <li><a href="#">Previous</a></li>
+                        <li><a href="#">Next</a></li>
+                    </ul>*@
+                </nav>
+            </div><!-- /.blog-main -->
+            <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                @*TODO: ADD THE SIDEBAR BACK*@
+                @*<div class="sidebar-module sidebar-module-inset">
+                    <h4>About</h4>
+                    <p>
+                        Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean
+
+                        lacinia bibendum nulla sed consectetur.
+                    </p>
+                </div>*@
+                @if (Model is DavidSimmons.Models.ViewModelBase && Model != null)
+                {
+                    <div class="sidebar-module">
+                        <h4>Archives</h4>
+                        <ol class="list-unstyled">
+                            @if(Model.ArchiveList!=null)
+                            {
+                                foreach (var archive in Model.ArchiveList)
+                                {
+                                    //TODO: SICK OF FIGHTING ROUTING
+                                    @*<li>@Html.ActionLink(archive.Label, "Month", "Blog", new { monthKey = archive.Key }, null)</li>*@
+                                    <li>@Helpers.MyActionLink(archive.Label,"Blog", "Month", archive.Key)</li>
+                                }
+                            }
+                        @*<li><a href="#">March 2014</a></li>
+                        <li><a href="#">February 2014</a></li>
+                        <li><a href="#">January 2014</a></li>
+                        <li><a href="#">December 2013</a></li>
+                        <li><a href="#">November 2013</a></li>
+                        <li><a href="#">October 2013</a></li>
+                        <li><a href="#">September 2013</a></li>
+                        <li><a href="#">August 2013</a></li>
+                        <li><a href="#">July 2013</a></li>
+                        <li><a href="#">June 2013</a></li>
+                        <li><a href="#">May 2013</a></li>
+                        <li><a href="#">April 2013</a></li>*@
+                        </ol>
+                    </div>
+                }
+                @RenderSection("sidebar", required: false)
+                    @*TODO: MORE ADDING SIDEBARS BACK*@
+                    @*<div class="sidebar-module">
+                        <h4>Elsewhere</h4>
+                        <ol class="list-unstyled">
+                            <li><a href="#">GitHub</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                        </ol>
+                    </div>*@
+                </div><!-- /.blog-sidebar -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+    <footer class="blog-footer">
+        @*<p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>*@
+        <p>
+            <span id="footer-rule">@Html.CDNImage("rule.png")</span>
+        </p>
+        <p>
+            <a href="#">Back to top</a>
+        </p>
+    </footer>
+@RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="BlogProcessorRole" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="BlogPostProcessorRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.ServiceBus.ConnectionString" value="Endpoint=sb://dsimmons.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=P6c9hLLAyMVal3pvphHJdUZU/kXrQIj19tGvtPPYjaU=" />
+      <Setting name="SignalRHostPort" value="8080" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="dsimmons" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEFu9vhFKcB+kRqLSdj4RzMkwDQYJKoZIhvcNAQEBBQAEggEAE9WdUG2xsrBH/+LO8uZ1oa0gJU1whQUyxKiP5u6K0JwfUUvWuolGqXLlECi4YMdUBr44XgLogxy660E0+QxsXSfpTRprr1XT42sJtR7FJhYIfvDBtuEj6Wtphl/eR/GSmrvK8un9YzlsMAc/yjsPco/fIrS8A3XLysD732qtZ8KgyN4auhXNEnuEyqKVG+v4lNMqHd2TEv0ZxUAoJLFKlpO5utwsu2ByeNwbJCd6nNePxd9RVSIy2U5VbT9WcTcocJAyFrIsUd7POxLTNfHEbumWAVO4oBtB0D2MTxTT1ScxbqozHErN7rvRyoIF+FdFqljpFEmuiub72ui00Xsl2jAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECGa3Rwhc+flfgBDJrn0x4trdpea7VDlMSOIg" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2016-04-24T23:59:59.0000000-04:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+      <Setting name="StorageConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="184E52B995689057A6A0557272317379DE2D7A8C" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

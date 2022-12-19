@@ -1,0 +1,21 @@
+﻿@using System.Text;
+
+@functions {
+    public static object MyActionLink(string text, string controller, string action, params object[] parameters)
+    {
+        StringBuilder sbParams = new StringBuilder();
+
+        if(parameters != null && parameters.Any())
+        {
+            foreach(var param in parameters)
+            {
+                sbParams.Append("/");
+                sbParams.Append(param.ToString());
+            }
+        }
+
+        var prefix = Request.ApplicationPath.Length > 1 ? Request.ApplicationPath : String.Empty;
+
+        return new HtmlString(string.Format("<a href=\"{0}/{1}/{2}{3}\">{4}</a>", prefix, controller, action, sbParams, text));
+    }
+}

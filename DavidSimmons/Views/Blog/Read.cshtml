@@ -1,0 +1,31 @@
+﻿@model DavidSimmons.Models.BlogEntryModel
+@{
+    ViewBag.Title = Model.Entry.Title;
+}
+<div class="blog-post">
+    @if (!Request.IsAuthenticated)
+    {
+    <h2 class="blog-post-title">@Helpers.MyActionLink(Model.Entry.Title, "Blog", "Read", Model.Entry.PartitionKey, Model.Entry.Key)</h2>
+    }
+    else
+    {
+    <h2 class="blog-post-title">@Helpers.MyActionLink(Model.Entry.Title,"Admin","Edit", Model.Entry.PartitionKey, Model.Entry.Key)</h2>
+    }
+    <div>
+        @BBCodeTags.ToHtml(Model.Entry.Text)
+    </div>
+
+    @if (Model.Entry.Attachments != null && Model.Entry.Attachments.Count > 0)
+    {
+    <h4>Attachments</h4>
+    <ul>
+        @foreach (var a in Model.Entry.Attachments)
+        {
+            <li><a href="#">@a.FileName</a></li>
+        }
+    </ul>
+    }
+    <p class="blog-post-meta">
+        Posted by: <a href="#">@Model.Entry.PostedByUser</a> on @Model.Entry.PostDate.ToShortDateString()
+    </p>
+</div>

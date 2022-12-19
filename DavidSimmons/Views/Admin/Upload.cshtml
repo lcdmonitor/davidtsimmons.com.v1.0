@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Upload";
+}
+<script language="javascript" type="text/javascript">
+    var uploadFileNumber = 1;
+    function addUploadControl() {
+        uploadFileNumber = uploadFileNumber + 1;
+        $('#filesForUpload').append('<label for="SelectedFile">Filename:</label><input type="file" id="SelectedFile' + uploadFileNumber + '" name="selectedFiles" />');
+    }
+</script>
+
+@using (Html.BeginForm("Upload", "Admin", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div id="filesForUpload">
+        <label for="SelectedFile">Filename:</label><input type="file" id="SelectedFile" name="selectedFiles" />
+    </div>
+    <div>
+        <span><a href="javascript: addUploadControl();">Add more files..</a></span>
+    </div>
+    <input type="submit" value="Post" class="btn btn-default"/>
+}
+

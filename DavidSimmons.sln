@@ -1,0 +1,144 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30107.140
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0E4AA76D-89EC-4210-8283-1DF8B34A54C8}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{223C0671-130E-49B7-A85D-9515B4FF8972}"
+	ProjectSection(SolutionItems) = preProject
+		lib\6c7f7ce7-4b6a-441f-acd4-4dd9f944c571.json = lib\6c7f7ce7-4b6a-441f-acd4-4dd9f944c571.json
+		lib\sceditor-latest.zip = lib\sceditor-latest.zip
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DavidSimmons", "DavidSimmons\DavidSimmons.csproj", "{FAA45705-40C1-4105-8B12-BDD80B36E380}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DavidSimmons.Repository", "DavidSimmons.Repository\DavidSimmons.Repository.csproj", "{F1F1C7FD-3461-41A2-9A90-D0E63A4853E0}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "BlogProcessorRole", "BlogProcessorRole\BlogProcessorRole.ccproj", "{F0DC3AE7-BD32-46E6-9E82-322283CDE053}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogPostProcessorRole", "BlogPostProcessorRole\BlogPostProcessorRole.csproj", "{3EB20781-3F99-46EF-ABA6-CC7F8BA6DF9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DavidSimmons.Tests", "DavidSimmons.Tests\DavidSimmons.Tests.csproj", "{33E02C91-FFB8-41AD-956A-C25F7D26A14F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DavidSimmons.Contracts", "DavidSimmons.Contracts\DavidSimmons.Contracts.csproj", "{4EBD1107-D9CA-4B5C-9F80-4941219A97A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DavidSimmons.Core", "DavidSimmons.Core\DavidSimmons.Core.csproj", "{195F33F5-541E-4D34-A2C9-71845D7CF411}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DavidSimmons.Core.Cloud", "DavidSimmons.Core.Cloud\DavidSimmons.Core.Cloud.csproj", "{71923C0F-B1DB-45B7-B578-47E143F5B9DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DavidSimmons.Processing", "DavidSimmons.Processing\DavidSimmons.Processing.csproj", "{479795C5-3B65-44FE-970C-61339F48DBB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DavidSimmons.TestConsoleApplication", "DavidSimmons.TestConsoleApplication\DavidSimmons.TestConsoleApplication.csproj", "{DE0E1FA5-18FB-41B1-8B29-5AD60BC3A0C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DavidSimmons.Hubs", "DavidSimmons.Hubs\DavidSimmons.Hubs.csproj", "{0BFB0E8F-E99C-4CC9-90B3-450C520A5B9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DavidSimmons.Client", "DavidSimmons.Client\DavidSimmons.Client.csproj", "{AECB261E-16E5-45CC-B1A6-0BC978AD4D53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAA45705-40C1-4105-8B12-BDD80B36E380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAA45705-40C1-4105-8B12-BDD80B36E380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAA45705-40C1-4105-8B12-BDD80B36E380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAA45705-40C1-4105-8B12-BDD80B36E380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1F1C7FD-3461-41A2-9A90-D0E63A4853E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1F1C7FD-3461-41A2-9A90-D0E63A4853E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1F1C7FD-3461-41A2-9A90-D0E63A4853E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1F1C7FD-3461-41A2-9A90-D0E63A4853E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0DC3AE7-BD32-46E6-9E82-322283CDE053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0DC3AE7-BD32-46E6-9E82-322283CDE053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0DC3AE7-BD32-46E6-9E82-322283CDE053}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0DC3AE7-BD32-46E6-9E82-322283CDE053}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EB20781-3F99-46EF-ABA6-CC7F8BA6DF9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EB20781-3F99-46EF-ABA6-CC7F8BA6DF9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EB20781-3F99-46EF-ABA6-CC7F8BA6DF9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EB20781-3F99-46EF-ABA6-CC7F8BA6DF9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33E02C91-FFB8-41AD-956A-C25F7D26A14F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33E02C91-FFB8-41AD-956A-C25F7D26A14F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33E02C91-FFB8-41AD-956A-C25F7D26A14F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33E02C91-FFB8-41AD-956A-C25F7D26A14F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EBD1107-D9CA-4B5C-9F80-4941219A97A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EBD1107-D9CA-4B5C-9F80-4941219A97A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EBD1107-D9CA-4B5C-9F80-4941219A97A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EBD1107-D9CA-4B5C-9F80-4941219A97A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{195F33F5-541E-4D34-A2C9-71845D7CF411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{195F33F5-541E-4D34-A2C9-71845D7CF411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{195F33F5-541E-4D34-A2C9-71845D7CF411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{195F33F5-541E-4D34-A2C9-71845D7CF411}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71923C0F-B1DB-45B7-B578-47E143F5B9DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71923C0F-B1DB-45B7-B578-47E143F5B9DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71923C0F-B1DB-45B7-B578-47E143F5B9DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71923C0F-B1DB-45B7-B578-47E143F5B9DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{479795C5-3B65-44FE-970C-61339F48DBB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{479795C5-3B65-44FE-970C-61339F48DBB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{479795C5-3B65-44FE-970C-61339F48DBB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{479795C5-3B65-44FE-970C-61339F48DBB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE0E1FA5-18FB-41B1-8B29-5AD60BC3A0C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE0E1FA5-18FB-41B1-8B29-5AD60BC3A0C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE0E1FA5-18FB-41B1-8B29-5AD60BC3A0C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE0E1FA5-18FB-41B1-8B29-5AD60BC3A0C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BFB0E8F-E99C-4CC9-90B3-450C520A5B9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BFB0E8F-E99C-4CC9-90B3-450C520A5B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BFB0E8F-E99C-4CC9-90B3-450C520A5B9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BFB0E8F-E99C-4CC9-90B3-450C520A5B9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AECB261E-16E5-45CC-B1A6-0BC978AD4D53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AECB261E-16E5-45CC-B1A6-0BC978AD4D53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AECB261E-16E5-45CC-B1A6-0BC978AD4D53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AECB261E-16E5-45CC-B1A6-0BC978AD4D53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA824BFD-F056-45D1-B55B-25F57D8F9E52}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 13
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dsimmons.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DavidSimmons.Repository\\DavidSimmons.Repository.csproj
+		SccProjectName1 = DavidSimmons.Repository
+		SccLocalPath1 = DavidSimmons.Repository
+		SccProjectUniqueName2 = DavidSimmons\\DavidSimmons.csproj
+		SccProjectName2 = DavidSimmons
+		SccLocalPath2 = DavidSimmons
+		SccProjectUniqueName3 = BlogProcessorRole\\BlogProcessorRole.ccproj
+		SccProjectName3 = BlogProcessorRole
+		SccLocalPath3 = BlogProcessorRole
+		SccProjectUniqueName4 = BlogPostProcessorRole\\BlogPostProcessorRole.csproj
+		SccProjectName4 = BlogPostProcessorRole
+		SccLocalPath4 = BlogPostProcessorRole
+		SccProjectUniqueName5 = DavidSimmons.Tests\\DavidSimmons.Tests.csproj
+		SccProjectName5 = DavidSimmons.Tests
+		SccLocalPath5 = DavidSimmons.Tests
+		SccProjectUniqueName6 = DavidSimmons.Contracts\\DavidSimmons.Contracts.csproj
+		SccProjectName6 = DavidSimmons.Contracts
+		SccLocalPath6 = DavidSimmons.Contracts
+		SccProjectUniqueName7 = DavidSimmons.Core\\DavidSimmons.Core.csproj
+		SccProjectName7 = DavidSimmons.Core
+		SccLocalPath7 = DavidSimmons.Core
+		SccProjectUniqueName8 = DavidSimmons.Core.Cloud\\DavidSimmons.Core.Cloud.csproj
+		SccProjectName8 = DavidSimmons.Core.Cloud
+		SccLocalPath8 = DavidSimmons.Core.Cloud
+		SccProjectUniqueName9 = DavidSimmons.Processing\\DavidSimmons.Processing.csproj
+		SccProjectName9 = DavidSimmons.Processing
+		SccLocalPath9 = DavidSimmons.Processing
+		SccProjectUniqueName10 = DavidSimmons.TestConsoleApplication\\DavidSimmons.TestConsoleApplication.csproj
+		SccProjectName10 = DavidSimmons.TestConsoleApplication
+		SccLocalPath10 = DavidSimmons.TestConsoleApplication
+		SccProjectUniqueName11 = DavidSimmons.Hubs\\DavidSimmons.Hubs.csproj
+		SccProjectName11 = DavidSimmons.Hubs
+		SccLocalPath11 = DavidSimmons.Hubs
+		SccProjectUniqueName12 = DavidSimmons.Client\\DavidSimmons.Client.csproj
+		SccProjectName12 = DavidSimmons.Client
+		SccLocalPath12 = DavidSimmons.Client
+	EndGlobalSection
+EndGlobal

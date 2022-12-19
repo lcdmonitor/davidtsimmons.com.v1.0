@@ -1,0 +1,44 @@
+﻿//TODO:
+
+http://www.intstrings.com/ramivemula/articles/jumpstart-30-create-azure-cloud-service-package-cspkg-of-visual-studio-2013-project-solution-using-powershell/
+
+
+old school signalR.bat
+
+@ECHO OFF
+SETLOCAL
+REM You might prefer specific scripts for each tool. Makes the usage a bit easier. This is an example for signalR.
+
+ECHO %1
+
+ECHO '**************************************'
+ECHO 'Attempting to locate SignalR Utilities in:'
+ECHO %1Packages
+ECHO '**************************************'
+
+FOR /R %1Packages %%G IN (signalR.exe) DO (
+  IF EXIST %%G (
+    SET TOOLPATH=%%G
+    GOTO FOUND
+  )
+)
+IF '%TOOLPATH%'=='' GOTO NOTFOUND
+
+:FOUND
+ECHO '**************************************'
+ECHO 'Found SignalR in:'
+ECHO %TOOLPATH%
+ECHO '**************************************'
+
+
+ECHO '**************************************'
+ECHO 'executing signalR utilties'
+ECHO '**************************************'
+
+%TOOLPATH% ghp  /o:%2
+GOTO :EOF
+
+:NOTFOUND
+ECHO signalR not found.
+EXIT /B 1
+

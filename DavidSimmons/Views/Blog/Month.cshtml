@@ -1,0 +1,22 @@
+﻿@model DavidSimmons.Models.BlogEntryListModel
+@{
+    ViewBag.Title = "David Simmons By Month";
+}
+@foreach (var entry in Model.Entries)
+{
+    <div class="blog-post">
+        @if (!Request.IsAuthenticated)
+        {
+            <h2 class="blog-post-title">@Helpers.MyActionLink(entry.Title, "Blog", "Read", entry.PartitionKey, entry.Key)</h2>
+        }
+        else
+        {
+            <h2 class="blog-post-title">@Helpers.MyActionLink(entry.Title, "Admin", "Edit", entry.PartitionKey, entry.Key)</h2>
+        }
+        <p class="blog-post-meta">@entry.PostDate.ToString("MMMM dd, yyyy") by <a href="#">@entry.PostedByUser</a></p>
+        <p>
+            @BBCodeTags.ToHtml(entry.Text)
+        </p>
+    </div><!-- /.blog-post -->
+}
+

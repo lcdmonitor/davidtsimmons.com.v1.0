@@ -1,0 +1,57 @@
+{
+  "appId": "6c7f7ce7-4b6a-441f-acd4-4dd9f944c571",
+  "appRoles": [],
+  "availableToOtherTenants": false,
+  "displayName": "MyBlog",
+  "errorUrl": null,
+  "groupMembershipClaims": "All",
+  "homepage": "https://www.davidtsimmons.com/",
+  "identifierUris": [
+    "https://www.davidtsimmons.com/MyBlog"
+  ],
+  "keyCredentials": [],
+  "knownClientApplications": [],
+  "logoutUrl": null,
+  "oauth2AllowImplicitFlow": false,
+  "oauth2AllowUrlPathMatching": false,
+  "oauth2Permissions": [
+    {
+      "adminConsentDescription": "Allow the application to access Dave's Blog on behalf of the signed-in user.",
+      "adminConsentDisplayName": "Access Dave's Blog",
+      "id": "5cff2fb4-a17d-44af-9f29-c8f6c29097ba",
+      "isEnabled": true,
+      "type": "User",
+      "userConsentDescription": "Allow the application to access Dave's Blog on your behalf.",
+      "userConsentDisplayName": "Access Dave's Blog",
+      "value": "user_impersonation"
+    }
+  ],
+  "oauth2RequirePostResponse": false,
+  "passwordCredentials": [
+    {
+      "customKeyIdentifier": null,
+      "endDate": "2017-10-28T12:57:15.8901211Z",
+      "keyId": "646dabc9-bc39-4b3d-a91a-d1edce82078a",
+      "startDate": "2015-10-28T12:57:15.8901211Z",
+      "value": null
+    }
+  ],
+  "publicClient": null,
+  "replyUrls": [
+    "https://www.davidtsimmons.com/"
+  ],
+  "requiredResourceAccess": [],
+  "samlMetadataUrl": null,
+  "extensionProperties": [],
+  "objectType": "Application",
+  "objectId": "75a9b9f9-f615-4abf-b5c7-dc9ab2cb895f",
+  "deletionTimestamp": null,
+  "createdOnBehalfOf": null,
+  "createdObjects": [],
+  "manager": null,
+  "directReports": [],
+  "members": [],
+  "memberOf": [],
+  "owners": [],
+  "ownedObjects": []
+}

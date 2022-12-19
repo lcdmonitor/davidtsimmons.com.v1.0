@@ -1,0 +1,13 @@
+﻿@if (Request.IsAuthenticated)
+{
+    @Html.ActionLink("Administration", "Index", "Admin", null, new { @class = "blog-nav-item" })
+    @Html.ActionLink("Sign out", "SignOut", "Account", null, new { @class = "blog-nav-item" })
+    <span class="blog-nav-item">Hello @User.Identity.Name</span>
+}
+@*else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Sign in", "SignIn", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}*@
+
