@@ -12,6 +12,7 @@
       <Setting name="SignalRHostPort" />
       <Setting name="StorageConnectionString" />
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" />
     </ConfigurationSettings>
     <Endpoints>
       <InputEndpoint name="SignalR" protocol="http" port="80" localPort="8080" />
