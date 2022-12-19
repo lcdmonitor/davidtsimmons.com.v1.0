@@ -11,10 +11,10 @@
       <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2016-04-24T23:59:59.0000000-04:00" />
       <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
       <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=dsimmons;AccountKey=AggBMWZlwJaY6y+W5e3Z305Yx0pENeNc9UC+VR/8tsoez3DUDUVlffOxxEgweJ9JR686b23nMdc5BWwdn5TIFQ==" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=dsimmons;AccountKey=AggBMWZlwJaY6y+W5e3Z305Yx0pENeNc9UC+VR/8tsoez3DUDUVlffOxxEgweJ9JR686b23nMdc5BWwdn5TIFQ==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=dsimmonscontent;AccountKey=Ck5QiYT9UPwufXfNLgb16E9nEcTQ+0eHT3jlFC7tCcTXJ8cKpnUahDEv/r5GuXMO85LrSAd8edf3u185nxw6KQ==" />
     </ConfigurationSettings>
     <Certificates>
-      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="184E52B995689057A6A0557272317379DE2D7A8C" thumbprintAlgorithm="sha1" />
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="84E5F5C395D09000E6C84319854BEF39085D8EE0" thumbprintAlgorithm="sha1" />
     </Certificates>
   </Role>
 </ServiceConfiguration>
